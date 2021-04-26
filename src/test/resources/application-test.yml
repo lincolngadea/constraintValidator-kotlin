@@ -1,0 +1,11 @@
+datasources:
+  default:
+    url: jdbc:h2:mem:testDb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE
+    driverClassName: org.h2.Driver
+
+##
+# Habilita o log do contexto transacional
+##
+logger:
+  levels:
+    io.micronaut.transaction: DEBUG

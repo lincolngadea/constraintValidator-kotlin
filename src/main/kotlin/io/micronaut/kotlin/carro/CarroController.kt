@@ -12,7 +12,8 @@ import javax.validation.Valid
 class CarroController {
 
     @Post("/api/carros")
-    fun criar(@Body @Valid carro: Carro): HttpResponse<Any> {
-        return HttpResponse.ok(carro)
+    fun criar(@Body @Valid carro: Carro, carroRepository: CarroRepository): HttpResponse<Any> {
+        val carroSalvo = carroRepository.save(carro)
+        return HttpResponse.ok(carroSalvo)
     }
 }

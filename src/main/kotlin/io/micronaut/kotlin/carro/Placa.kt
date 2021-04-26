@@ -29,7 +29,6 @@ class PlacaValidator: ConstraintValidator<Placa, String> {
             return true
         }
         return value.matches("[A-Z]{3}[0-9][0-9A-Z][0-9]{2}".toRegex())
-
     }
 
 }
